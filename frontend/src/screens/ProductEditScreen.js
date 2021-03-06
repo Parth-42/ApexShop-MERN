@@ -24,6 +24,9 @@ const ProductEditScreen = ({match, history}) => {
     
     const dispatch = useDispatch()
     
+    const userDetails = useSelector(state => state.userDetails)
+    const {userLogin: {userInfo}} = userDetails
+
     const productDetails = useSelector(state => state.productDetails)
     const {loading, error, product} = productDetails
 
@@ -61,6 +64,7 @@ const ProductEditScreen = ({match, history}) => {
         try{
             const config = {
                 headers: {
+                    Authorization: `Bearer ${userInfo.token}`,
                     'Content-Type': 'multipart/form-data'
                 }
             }

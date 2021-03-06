@@ -23,6 +23,9 @@ const OrderScreen = ({match}) => {
     const orderDetails = useSelector(state => state.orderDetails)
     const {order, loading, error} = orderDetails
 
+    const userLogin = useSelector(state => state.userLogin)
+    const { userInfo } = userLogin
+
     useEffect(()=>{
 
         const addPayPalScript = async () => {
@@ -158,7 +161,7 @@ const OrderScreen = ({match}) => {
                                 <ListGroup.Item>
                                     {loadingPay && <Loader/>}
                                     {!sdkReady ? <Loader/> : (
-                                        <PayPalButton currency="INR" amount={order.totalPrice} onSuccess={successPaymentHandler}/>
+                                        <PayPalButton currency="INR" amount={order.totalPrice} onSuccess={successPaymentHandler} disabled={userInfo.isAdmin}/>
                                     )}
                                 </ListGroup.Item>
                             )}
