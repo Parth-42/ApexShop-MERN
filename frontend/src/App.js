@@ -35,10 +35,13 @@ const App = ()=> {
         <Route exact={true} path='/cart/:id?' component={CartScreen}/>
         <Route exact={true} path='/admin/userlist' component={UserListScreen}/>
         <Route exact={true} path='/admin/productlist' component={ProductListScreen}/>
+        <Route exact={true} path='/admin/productlist/:pageNumber' component={ProductListScreen}/>
         <Route exact={true} path='/admin/product/:id/edit' component={ProductEditScreen}/>
         <Route exact={true} path='/admin/user/:id/edit' component={UserEditScreen}/>
         <Route exact={true} path='/admin/orderlist' component={OrderListScreen}/>
-        <Route path='/search/:keyword' component={HomeScreen}/>
+        <Route exact={true} path='/search/:keyword' component={HomeScreen}/>
+        <Route exact={true} path='/page/:pageNumber' component={HomeScreen}/>
+        <Route exact={true} path='/search/:keyword/page/:pageNumber' component={HomeScreen}/>
         <Route exact={true} path='/' component={HomeScreen}/>
       </Container>
     </main>
