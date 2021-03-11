@@ -6,7 +6,7 @@ import Product from '../models/productModel.js'
 // @access  Public
 const getProducts = asyncHandler(async(req, res) => {
 
-    const pageSize = 10
+    const pageSize = 8
     const page = Number(req.query.pageNumber) || 1
 
     const keyword = req.query.keyword ? {
@@ -63,7 +63,7 @@ const createProduct = asyncHandler(async(req, res) => {
         user: req.user._id,
         image: '/images/sample.jpg',
         brand: 'Sample brand',
-        category: 'Sameple category',
+        category: 'Sample category',
         countInStock: 0,
         numReviews: 0,
         description: 'Sample description'

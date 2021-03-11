@@ -34,11 +34,16 @@ h2 {
   color: #fff;
 }
 
-.carousel img {
-  height: 300px;
+.carousel-item {
   padding: 30px;
+}
+
+.carousel img {
+  height: 250px;
+  /* padding: 30px; */
   margin: 40px;
-  border-radius: 100%;
+  border-radius: 5px;
+  border: 2px solid #f7f3e7;
   margin-left: auto;
   margin-right: auto;
 }

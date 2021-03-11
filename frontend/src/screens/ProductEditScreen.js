@@ -23,9 +23,9 @@ const ProductEditScreen = ({match, history}) => {
     const [uploading, setUploading] = useState(false)
     
     const dispatch = useDispatch()
-    
-    const userDetails = useSelector(state => state.userDetails)
-    const {userLogin: {userInfo}} = userDetails
+
+    const userLogin = useSelector(state => state.userLogin)
+    const { userInfo } = userLogin
 
     const productDetails = useSelector(state => state.productDetails)
     const {loading, error, product} = productDetails

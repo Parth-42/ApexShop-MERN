@@ -89,7 +89,7 @@ const OrderScreen = ({match, history}) => {
                             </p>
 
                             <p>
-                                <strong>Address:</strong>
+                                <strong>Address: </strong>
                                 {order.shippingAddress.address}, {order.shippingAddress.city}, {order.shippingAddress.postalCode}, {order.shippingAddress.country}
                             </p>
 
